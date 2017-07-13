@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<HTA:Application id="AppExecute" 
+		ApplicationName="AppExecute"
+		WindowState="maximize">
+		<script language="JavaScript"><!--		
+		function myapp(ppath,fpath){
+			var cmd = new ActiveXObject("WScript.Shell");			
+			cmd.run("cmd /C CD C:\\publish & publish.bat "+ppath+" "+fpath);
+			}
+		
+		--></script>
+	</head>
+	<body>
+		<font color=Blue><font size=5>Test Publisher</font>
+		<br>
+		<p>Property path
+		<Input type="file" name="proppath" title = "tooltip">
+		<br>
+		<p>Input file path
+		<Input type="file" name="filepath" title = "tooltip">
+		<br>
+		<br>
+		<input type="button" value="CMD" onclick="myapp(proppath.value,filepath.value)"><br>		
+		</form></center>
+	</body>
+
+</html>
